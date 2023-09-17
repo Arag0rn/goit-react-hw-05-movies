@@ -12,8 +12,8 @@ export const TrendingCard = ( {data} ) => {
             <Card.Img variant="top" src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : 'https://via.placeholder.com/700?text=NoImageFound'} />
             <Card.Body>
               <Card.Title>{original_title}</Card.Title>
-              <Card.Text>{popularity}</Card.Text>
-              <Card.Text>{release_date}</Card.Text>
+              <Card.Text>Popularity: {popularity}</Card.Text>
+              <Card.Text>Release date:{release_date}</Card.Text>
             </Card.Body>
           </Card>
         ))}
