@@ -1,4 +1,4 @@
-import Button from 'react-bootstrap/Button';
+
 import Card from 'react-bootstrap/Card';
 
 export const Movies = ({data}) => {
@@ -11,7 +11,6 @@ export const Movies = ({data}) => {
             <Card.Img variant="top" src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : 'https://via.placeholder.com/700?text=NoImageFound'} />
             <Card.Body>
               <Card.Title>{original_title}</Card.Title>
-              <Button className='movie-btn' variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
         ))}
