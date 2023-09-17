@@ -4,5 +4,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 6px;
+}
+
+.card-body{
+    display: grid;
+    grid-template-rows: 70px 40px;
+    justify-items: center;
+}
+
+.card-title{
+    font-size: 15px;
+}
+
+h2{
+    text-align: center;
 }

@@ -1,10 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import "./Trending.style.scss"
 
-export const TrendingCard = ( {data} ) => {
+export const Movies = ({data}) => {
     return (
-      <>
+        <>
       <h2>Trending Movies</h2>
       <div className="card-container">
         {data.map(({ backdrop_path, original_title, overview, poster_path }) => (
@@ -18,5 +17,6 @@ export const TrendingCard = ( {data} ) => {
         ))}
       </div>
       </>
-    );
-  };
+      );
+    
+}
