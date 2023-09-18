@@ -1,10 +1,11 @@
 
 import Card from 'react-bootstrap/Card';
 
-export const Movies = ({data}) => {
+export const SearchMovieCard = ({data}) => {
+  console.log(data);
     return (
         <>
-      <h2>Trending Movies</h2>
+      <h2>Results</h2>
       <div className="card-container">
         {data.map(({ backdrop_path, original_title, overview, poster_path }) => (
           <Card key={original_title} style={{ width: '13em', height: "450px" }}>
