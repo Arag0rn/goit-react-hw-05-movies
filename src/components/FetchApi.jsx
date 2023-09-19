@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+
 
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3/";
@@ -32,10 +32,13 @@ export const getSearchMovie = async (query) => {
   const { data } = await axios.get('/search/movie', {
     params: {
       query,
-      page: 1,
     },
   });
   console.log(data);
   return data;
 };
 
+export const getMovieById = async (id) => {
+  const { data } = await axios.get(`/movie/${id}`)
+  return data;
+}

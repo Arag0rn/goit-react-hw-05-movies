@@ -7,6 +7,7 @@ import {Cast} from "pages/Cast";
 import {Reviews} from "pages/Reviews";
 import { MostRatedMovie } from "pages/MostRatedMovie";
 import { TrendingMovies} from "pages/TrendingMovies";
+import { MovieDetail } from "pages/MovieDetail";
 
 
 export const App = () => {
@@ -19,6 +20,7 @@ export const App = () => {
       <Route path="/most-rated-movie" element={<MostRatedMovie />} />
       <Route path="/cast" element={<Cast />} />
       <Route path="/movies/" element={<Movies />} />
+      <Route path="/movies/:id" element={<MovieDetail />} />
       <Route path="/reviews" element={<Reviews />} />
     </Route>
     </Routes> 

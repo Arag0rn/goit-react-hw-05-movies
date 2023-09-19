@@ -1,0 +1,29 @@
+.card-container{
+    margin: 10px auto;
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 6px;
+}
+
+.card{
+    display: grid;
+    flex-direction: row;
+    padding: 0;
+    height: 300px;
+    padding: 1px 2px; 
+    color: var(--bs-card-color);
+}
+
+.card-body{
+
+}
+
+.card-title{
+    font-size: 15px;
+}
+
+h2{
+    text-align: center;
+}

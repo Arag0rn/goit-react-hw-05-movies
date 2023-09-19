@@ -7,14 +7,12 @@ export const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("query") ?? '';
   const [searchResult, setSearchResult] = useState([]);
-console.log(query);
 
   useEffect(() => {
     const onSearchMovie = async () => {
       try {
         const { results } = await getSearchMovie(query);
         setSearchResult(results);
-        console.log(results);
       } catch (error) {
         console.error(error);
       }
@@ -26,7 +24,6 @@ console.log(query);
   }, [query]);
 
 
-  console.log(searchResult);
   return (
     <>
       <SearchMovieCard data={searchResult} />
