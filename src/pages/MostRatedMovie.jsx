@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { MostRated } from "components/MostRated";
 import { getUpcomingMovie } from "components/FetchApi";
 
-export const MostRatedMovie = () => {
+const MostRatedMovie = () => {
 
     const [upcoming, setUpcoming] = useState([]) 
 
@@ -22,3 +22,5 @@ export const MostRatedMovie = () => {
       return <MostRated data={upcoming}/>
 
 }
+
+export default MostRatedMovie;

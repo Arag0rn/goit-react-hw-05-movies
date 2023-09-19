@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getTrendingMovie } from "components/FetchApi";
 
 
-export const TrendingMovies =()=>{
+const TrendingMovies =()=>{
     const [results, setResults] = useState([])
 
 
@@ -22,3 +22,5 @@ export const TrendingMovies =()=>{
 
     return <TrendingCard data={results}/>
 }
+
+export default TrendingMovies;

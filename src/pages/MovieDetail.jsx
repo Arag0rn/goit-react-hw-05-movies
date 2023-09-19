@@ -1,13 +1,18 @@
 import { MoviesDetailCard } from "components/MovieDetail/MoviesDetailCard"
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation} from 'react-router-dom';
 import { getMovieById } from "components/FetchApi";
 import { useEffect, useState } from 'react';
+import { Loader } from 'components/Loader/Loader';
 
-export const MovieDetail = ()=> {
+const MovieDetail = ()=> {
     const [movieDetail, setMovieDetail] = useState({});
 
+
+    const location = useLocation();
+    const backLinkHref = location.state?.from ?? "/movies";
+
     const { id } = useParams();
-    console.log(id);
+  
     useEffect(() => {
         const onMovielick = async () => {
           try {
@@ -24,7 +29,12 @@ export const MovieDetail = ()=> {
   
       console.log(movieDetail);
 
+    
+
     return (<>
-         {movieDetail && <MoviesDetailCard data1={movieDetail} />} 
+         {movieDetail && <MoviesDetailCard data1={movieDetail} />}
+       
     </>)
 }
+
+export default MovieDetail;
