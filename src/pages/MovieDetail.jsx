@@ -4,6 +4,7 @@ import { getMovieById } from "components/FetchApi";
 import { useEffect, useState } from 'react';
 
 
+
 const MovieDetail = ()=> {
     const [movieDetail, setMovieDetail] = useState({});
 
@@ -27,6 +28,7 @@ const MovieDetail = ()=> {
     
 
     return (<>
+          
          {movieDetail && <MoviesDetailCard data1={movieDetail} />}
        
     </>)

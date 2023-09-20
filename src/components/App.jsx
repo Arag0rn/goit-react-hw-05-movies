@@ -12,20 +12,19 @@ const MovieDetail = lazy(() => import('../pages/MovieDetail.jsx'));
 
 
 export const App = () => {
- 
   return (
     <Suspense fallback={<Loader/>}>
-    <Routes>
-    <Route path="/" element={<Home/>} >
-      <Route index element={< TrendingMovies  />} />
-      <Route path="/most-rated-movie" element={<MostRatedMovie />} />
-      <Route path="/movies" element={<Movies />} />
-      <Route path="/movies/:id" element={<MovieDetail />} >
-      <Route path="cast" element={<CastPage />} ></Route>
-      <Route path="reviews" element={<Reviews />} ></Route>
-      </Route>
-    </Route>
-    </Routes> 
+      <Routes>
+        <Route path="/" element={<Home/>}>
+          <Route index element={<TrendingMovies />} />
+          <Route path="/most-rated-movie" element={<MostRatedMovie />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:id" element={<MovieDetail />}>
+            <Route path="cast" element={<CastPage />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+        </Route>
+      </Routes> 
     </Suspense>
   );
 };

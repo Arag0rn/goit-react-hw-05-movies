@@ -37,7 +37,7 @@ export const StyledField = styled(Field)`
   width: 100%;
   font: inherit;
   font-size: 20px;
-  border: none;
+  border: "1px solid black"
   outline: none;
   padding-left: 4px;
   padding-right: 4px;

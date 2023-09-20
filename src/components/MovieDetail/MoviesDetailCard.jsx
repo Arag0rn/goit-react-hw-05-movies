@@ -10,14 +10,15 @@ import { ReactComponent as BackImage } from "../../chevron.svg"
 export const MoviesDetailCard = ({data1}) => {
   
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? "/";
   const { vote_average, genres, id
     , title, overview, poster_path  } = data1;
+   const backLinkHref = location?.state?.from ?? `/movies`;  
+
     return (
       <>
        <h2>Movie Detail</h2>
         <div className="cast-container" >
-          <Link  to={backLinkHref}>
+          <Link  to={backLinkHref} >
         <BackImage alt="BackImage" />
         </Link>
             <Card key={id} style={{ width: '74.5em', height: 'auto', display: 'flex', flexDirection: 'row', padding: "20px", gap: "20px"}}>
@@ -30,8 +31,8 @@ export const MoviesDetailCard = ({data1}) => {
                 <Card.Subtitle className="mb-2 text-muted">Genres</Card.Subtitle>
                 {genres && genres.map(({ name }) => <Card.Text style={{display: 'inline-flex', marginLeft:"10px"}} key={name}>{name}</Card.Text>)}
                <div className="link-box"> 
-               <Link style={{ textDecoration: "none" }} to={`/movies/${id}/cast`}> <Button variant="primary" className='movie-btn'>Cast</Button>{' '}</Link>
-               <Link style={{ textDecoration: "none" }} to={`/movies/${id}/reviews`}><Button variant="primary"   className='movie-btn'>Reviews</Button>{' '}</Link>
+               <Link style={{ textDecoration: "none" }} to={`/movies/${id}/cast`} state={location.state}> <Button variant="primary" className='movie-btn'>Cast</Button>{' '}</Link>
+               <Link style={{ textDecoration: "none" }} to={`/movies/${id}/reviews`} state={location.state}><Button variant="primary"   className='movie-btn'>Reviews</Button>{' '}</Link>
                 </div>
                 
               </Card.Body>

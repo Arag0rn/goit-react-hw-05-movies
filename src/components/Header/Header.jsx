@@ -1,6 +1,6 @@
 import "./Header.style.scss";
 import { Link } from "react-router-dom";
-import { Searchbar } from "components/SearchBar/Searchbar";
+
 
 
 export const Header = () => {
@@ -20,7 +20,8 @@ export const Header = () => {
         <nav className="menu">
           <Link className="navLink" to="/">Trending Movies</Link>
           <Link className="navLink" to="/most-rated-movie">Most Rated Movie</Link>
-          <Searchbar  />
+          <Link className="navLink" to="/movies">Search Movie</Link>
+          
           
         </nav>
       </div>

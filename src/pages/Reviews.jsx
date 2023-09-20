@@ -6,7 +6,7 @@ import { ReviewsCard } from "components/Reviews/ReviewsCard";
 const Reviews =()=>{
     const [movieReviews, setMovieReviews ] = useState([])
     const { id } = useParams();
-    console.log(id);
+  
 
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const Reviews =()=>{
           try {
             const data = await getMovieReview(id);
             setMovieReviews(data);
-            console.log(data);
+         
           } catch (error) {
             console.error(error);
           }

@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import "./ReviewsCard.styled.scss"
 export const ReviewsCard = ({data}) => {
-    console.log(data);
+
       return (
         <>
          <h2>Reviews</h2>
