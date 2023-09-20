@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/294.8d1b9c7f.chunk.css","mappings":"AAAA,mBACI,aACA,eACA","sources":["components/Reviews/ReviewsCard.styled.scss"],"sourcesContent":[".reviews-container{\n    display: flex;\n    flex-wrap: wrap;\n    gap: 20px;\n}"],"names":[],"sourceRoot":""}
