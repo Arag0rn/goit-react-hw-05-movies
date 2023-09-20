@@ -4,7 +4,7 @@ import { SearchMovieCard } from "components/Movies/SearchMovieCard";
 import { useSearchParams } from "react-router-dom";
 
 const Movies = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const query = searchParams.get("query") ?? '';
   const [searchResult, setSearchResult] = useState([]);
 
