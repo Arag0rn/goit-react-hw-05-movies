@@ -1,14 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import "./Trending.style.scss"
+import  "./Trending.style.scss"
+
 
 export const TrendingCard = ( {data} ) => {
+  const location = useLocation();
     return (
       <>
       <h2>Trending Movies</h2>
       <div className="card-container">
         {data.map(({id, title, release_date, poster_path }) => (
-         <Link to={`/movies/${id}`}  style={{ textDecoration: "none" }}> <Card key={id} style={{ width: '13rem'}}>
+         <Link to={`/movies/${id}`}  style={{ textDecoration: "none" }} state={{from: location }}> <Card key={id} style={{ width: '13rem'}}>
          <Card.Img variant="top" src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : 'https://via.placeholder.com/700?text=NoImageFound'} />
          <Card.Body>
            <Card.Title style={{fontSize: "15px"}}>{title}</Card.Title>
