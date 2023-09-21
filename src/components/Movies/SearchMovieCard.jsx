@@ -12,13 +12,14 @@ export const SearchMovieCard = ({data}) => {
       <div style={{display:"flex", justifyContent: "center"}}>
       <Searchbar /></div>
       <div className="card-container">
-        {data.map(({ id, title, poster_path }) => (
-        <Link to={`/movies/${id}`} state={{from: location }}  style={{ textDecoration: "none" }}><Card key={id} style={{ width: '13em', height: "auto" }}>
+        {data.map(({ id, title, poster_path, release_date}) => (
+        <Link to={`/movies/${id}`} state={{from: location }}  style={{ textDecoration: "none" }}><div key={id} style={{ width: '13em', height: "auto" }}>
             <Card.Img variant="top" src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : 'https://via.placeholder.com/700?text=NoImageFound'} />
-            <Card.Body style={{pading: "15px"}}>
+            <div style={{pading: "15px"}}>
               <Card.Title style={{fontSize: "15px"}}>{title}</Card.Title>
-            </Card.Body>
-          </Card>
+              <Card.Text>{release_date.split('-').reverse().join('.')}</Card.Text>
+            </div>
+          </div>
           </Link>
         ))}
       </div>
